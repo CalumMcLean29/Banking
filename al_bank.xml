@@ -1,0 +1,24 @@
+<?xml version='1.0'  encoding='ISO-8859-1'?>
+<tables xmlns="https://www.w3schools.com" xmlns:xsi="https://www.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com table.xsd">
+	<table name ="al_bank" location="trans_d">
+		<columns>
+			<column name="bank_name" type="varchar2" size="50"/>
+			<column name="account_number" type="varchar2" size="50"/>
+			<column name="sort_code" type="varchar2" size="50"/>
+			<column name="account_moniker" type="varchar2" size="50"/>
+			<column name="account_type" type="varchar2" size="50"/>
+			<column name="bank_id" type="number" size="20"/>
+
+		</columns>
+		<primary-key name="bk_pk" location ="trans_i">
+			<key_column name="account_number"/>
+			<key_column name="sort_code"/>
+		<primary-key/>
+		<foreign-keys/>
+		<indexes> 
+			<index name="bk_u1" location="trans_i" unique="true">
+				<index-column name"bank_id"/>
+			<index/>
+		<indexes/>
+	</table>
+</tables>

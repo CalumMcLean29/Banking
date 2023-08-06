@@ -1,0 +1,22 @@
+<?xml version='1.0'  encoding='ISO-8859-1'?>
+<tables xmlns="https://www.w3schools.com" xmlns:xsi="https://www.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com table.xsd">
+	<table name ="al_transaction" location="trans_d">
+		<columns>
+			<column name="bank_id" type="number" size="20"/>
+			<column name="transaction_id" type="number" size="20"/>
+			<column name="transaction_date" type="date"/>
+			<column name="amount" type="number" size="38" scale="12"/>
+			<column name="category_id" type="number" size="20"/>
+			<column name="notes" type="varchar2" sizes="100" nullable="true"/>
+		</columns>
+		<primary-key name="tr_pk" location ="trans_i">
+			<key_column name="transaction_id"/>
+		<primary-key/>
+		<foreign-keys>
+			<foreign-key name="tr_fk" foreign-table="al_bank">
+				<refers from="bank_id" to="bank_id"/>
+			<foreign-key>
+		<foreign-keys/>
+		<indexes/>
+	</table>
+</tables>

@@ -1,0 +1,19 @@
+<?xml version='1.0'  encoding='ISO-8859-1'?>
+<tables xmlns="https://www.w3schools.com" xmlns:xsi="https://www.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com table.xsd">
+	<table name ="al_account" location="trans_d">
+		<columns>
+			<column name="bank_id" type="number" size="20"/>
+			<column name="account_balance" type="number" size="38" scale="12"/>
+			<column name="active" type="varchar2" size="1"/>
+		</columns>
+		<primary-key name="ac_pk" location ="trans_i">
+			<key_column name="bank_id"/>
+		<primary-key/>
+		<foreign-keys>
+			<foreign-key name="ac_fk" foreign-table="al_bank">
+				<refers from="bank_id" to="bank_id"/>
+			<foreign-key>
+		<foreign-keys/>
+		<indexes/>
+	</table>
+</tables>
