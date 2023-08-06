@@ -1,0 +1,14 @@
+create or replace TRIGGER AL_TRG_AFT_INS_DEL_BK
+after INSERT OR UPDATE OR DELETE
+ON AL_BANK
+FOR EACH ROW
+
+BEGIN
+    IF INSERTING THEN
+
+        INSERT INTO AL_ACCOUNT
+        VALUES
+        (:new.bank_id, 0.0, 'Y');
+
+    END IF;
+END;
